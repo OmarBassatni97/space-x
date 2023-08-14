@@ -26,7 +26,7 @@ const Mission = () => {
                     className='text-white w-[50%] flex flex-col gap-3'>
                     <h1 className='uppercase font-semibold text-4xl tracking-wide'> {text}</h1>
                     <p>
-                        In 20220, SpaceX returned America's ability to fly NASA astronauts to and from the International Space Station on American vehicles for the first time since 2011. In addition to flying astronauts to space for NASA, SpaceX's Dragon spacecraft can also carry commercial astronauts to Earth orbit, the ISS or beyond.
+                        In 20220, SpaceX returned America&apos;s ability to fly NASA astronauts to and from the International Space Station on American vehicles for the first time since 2011. In addition to flying astronauts to space for NASA, SpaceX&apos;s Dragon spacecraft can also carry commercial astronauts to Earth orbit, the ISS or beyond.
                     </p>
                 </motion.div>
                 <motion.div
