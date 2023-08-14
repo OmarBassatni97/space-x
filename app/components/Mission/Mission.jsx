@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 import { useTypewriter } from 'react-simple-typewriter'
 const Mission = () => {
     const [text] = useTypewriter({
-        words: [' taking humans to space', 'making our world a better place'],
-        loop: false,
-        delaySpeed: 3000
+        words: [' taking humans to space'],
+        loop: 1,
+        typeSpeed: 150
     })
     return (
         <div className='flex justify-center h-screen'>
