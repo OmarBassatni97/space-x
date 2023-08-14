@@ -1,14 +1,37 @@
+'use client'
 import Image from 'next/image'
 import React from 'react'
-
+import { motion } from 'framer-motion'
 const Navbar = () => {
     return (
-        <nav className='h-[70px] w-full flex justify-center text-white'>
+        <nav className='h-[100px] bg-black w-full flex justify-center text-white'>
             <div className='flex justify-between w-[1440px] h-full items-center'>
-                <span>
+                <motion.span
+                    initial=
+                    {{
+                        opacity: 0,
+                        y: -500,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0
+                    }}
+                    transition={{ duration: 2 }}
+                >
                     <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} />
-                </span>
-                <div>
+                </motion.span>
+                <motion.div
+                    initial=
+                    {{
+                        opacity: 0,
+                        y: -500,
+                    }}
+                    animate={{
+                        opacity: 1,
+                        y: 0
+                    }}
+                    transition={{ duration: 2 }}
+                >
                     <ul className='flex gap-3 uppercase'>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Capsules</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Cores</li>
@@ -19,7 +42,7 @@ const Navbar = () => {
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Missions</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Rockets</li>
                     </ul>
-                </div>
+                </motion.div>
             </div>
 
         </nav>
