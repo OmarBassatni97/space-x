@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Mission from './components/Mission/Mission'
 
 export default function Home() {
   return (
-    <div className='h-screen bg-black'>
-     
+    <div className='bg-black'>
+     <Mission/>
     </div>
   )
 }
