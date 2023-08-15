@@ -41,7 +41,7 @@ const Mission = () => {
                     }}
                     transition={{ duration: 2, delay: 1.5, }}
                 >
-                    <Image src='/assets/images/astronaut.webp' height={800} width={800} />
+                    <Image src='/assets/images/astronaut.webp' height={800} width={800} alt='astronaut'/>
                 </motion.div>
             </div>
         </div >

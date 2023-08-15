@@ -4,7 +4,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 const Navbar = () => {
     return (
-        <nav className='h-[100px] bg-black w-full flex justify-center text-white'>
+        <nav className='h-[100px]  w-full flex justify-center text-white'>
             <div className='flex justify-between w-[1440px] h-full items-center'>
                 <motion.span
                     initial=
@@ -18,7 +18,7 @@ const Navbar = () => {
                     }}
                     transition={{ duration: 2 }}
                 >
-                    <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} />
+                    <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} alt='spacex'/>
                 </motion.span>
                 <motion.div
                     initial=

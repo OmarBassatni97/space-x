@@ -5,9 +5,8 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const StarLinkMission = () => {
     const divOne = useRef()
-    const divTwo = useRef()
     const [divOneVisible, setDivOneVisible] = useState()
-    const [divTwoVisible, setDivTwoVisible] = useState()
+
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[0]
@@ -37,7 +36,7 @@ const StarLinkMission = () => {
                     <p className='leading-10 opacity-90 text-xl'>On Friday, March 24 at 11:33 a.m. ET. Falcon 9 launched 56 Starlink satellites to low-Earth orbit from Space Launch Complex 40 at Cape Canaveral Space Force Station, Florida</p>
                 </motion.div>
                 <div>
-                    <Image src='/assets/images/Orbital.png' height={1200} width={1200} />
+                    <Image src='/assets/images/Orbital.png' height={1200} width={1200} alt='orbital'/>
                 </div>
                 <motion.div
                     ref={divOne}
