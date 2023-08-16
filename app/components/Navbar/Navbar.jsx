@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 const Navbar = () => {
     return (
         <nav className='h-[100px]  w-full flex justify-center text-white'>
@@ -18,7 +19,7 @@ const Navbar = () => {
                     }}
                     transition={{ duration: 2 }}
                 >
-                    <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} alt='spacex'/>
+                    <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} alt='spacex' />
                 </motion.span>
                 <motion.div
                     initial=
@@ -33,7 +34,7 @@ const Navbar = () => {
                     transition={{ duration: 2 }}
                 >
                     <ul className='flex gap-3 uppercase'>
-                        <li className='hover:text-gray-300 duration-300 cursor-pointer'>Capsules</li>
+                        <Link href='/capsules' className='hover:text-gray-300 duration-300 cursor-pointer'>Capsules</Link>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Cores</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Dragons</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Landing Pads</li>
