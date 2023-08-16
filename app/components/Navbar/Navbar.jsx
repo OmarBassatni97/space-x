@@ -35,7 +35,7 @@ const Navbar = () => {
                 >
                     <ul className='flex gap-3 uppercase'>
                         <Link href='/capsules' className='hover:text-gray-300 duration-300 cursor-pointer'>Capsules</Link>
-                        <li className='hover:text-gray-300 duration-300 cursor-pointer'>Cores</li>
+                        <Link href='/cores' className='hover:text-gray-300 duration-300 cursor-pointer'>Cores</Link>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Dragons</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Landing Pads</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Launches</li>
