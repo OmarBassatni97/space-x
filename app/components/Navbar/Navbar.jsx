@@ -46,6 +46,7 @@ const Navbar = () => {
                 </motion.div>
             </div>
 
+
         </nav>
     )
 }
