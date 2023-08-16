@@ -10,7 +10,7 @@ const Navbar = () => {
                     initial=
                     {{
                         opacity: 0,
-                        y: -500,
+                        y: -200,
                     }}
                     animate={{
                         opacity: 1,
@@ -24,7 +24,7 @@ const Navbar = () => {
                     initial=
                     {{
                         opacity: 0,
-                        y: -500,
+                        y: -200,
                     }}
                     animate={{
                         opacity: 1,
