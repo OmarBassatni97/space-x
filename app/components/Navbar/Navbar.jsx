@@ -19,7 +19,7 @@ const Navbar = () => {
                     }}
                     transition={{ duration: 2 }}
                 >
-                    <Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} alt='spacex' />
+                    <Link href='/'><Image src='/assets/images/Symbol-SpaceX.svg' width={150} height={150} alt='spacex' /></Link>
                 </motion.span>
                 <motion.div
                     initial=
