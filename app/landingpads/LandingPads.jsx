@@ -14,7 +14,7 @@ const LandingPads = () => {
     }, [])
     return (
         <div className='flex justify-center items-center'>
-            <div className='w-[1440px] grid grid-cols-3 justify-center gap-5'>
+            <div className='w-[1440px] grid grid-cols-4 justify-center gap-5'>
                 {data ? data.map((landingPad, index) => (
                     <LandingPad key={index} name={landingPad.type} zone={landingPad.full_name} image={landingPad.images.large[0]} desc={landingPad.details} id={landingPad.id}/>
                 ))

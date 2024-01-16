@@ -4,8 +4,8 @@ import React from 'react'
 
 const LandingPad = ({ image, name, zone, desc, id }) => {
     return (
-        <div className='w-[300px] h-[490px] bg-gray-300'>
-            <div className='w-[300px] h-[200px] relative'>
+        <div className='w-[350px] h-[490px] bg-gray-300'>
+            <div className='w-[350px] h-[200px] relative'>
                 <Image src={image} fill={true} quality={100} />
             </div>
             <div className='p-5'>
