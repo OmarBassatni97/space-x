@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
-const page = ({ params }) => {
+const LandingPadDetail = ({ params }) => {
     const [data, setData] = useState()
     useEffect(() => {
         const id = params.slug
@@ -58,4 +58,4 @@ const page = ({ params }) => {
 
 }
 
-export default page
+export default LandingPadDetail
