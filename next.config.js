@@ -5,8 +5,7 @@ module.exports = {
             {
                 protocol: 'https',
                 hostname: 'i.imgur.com',
-                port: '',
-                pathname: '/9fWdwNv.jpg',
+                
             },
             {
                 protocol: 'https',

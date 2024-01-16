@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import VerticalBorder from '../VerticalBorder'
 
 const FalconHeavyData = () => {
     return (
@@ -8,11 +9,14 @@ const FalconHeavyData = () => {
                 <div className='flex flex-col gap-6 items-center'>
                     <span className='text-8xl font-semibold'>5</span>
                     <span className='uppercase '>total launches</span>
+                    <VerticalBorder />
                 </div>
                 <div className='flex flex-col gap-6 items-center'>
                     <span className='text-8xl font-semibold'>11</span>
                     <span className='uppercase '>total landings</span>
+                    <VerticalBorder />
                 </div>
+                
                 <div className='flex flex-col gap-6 items-center'>
                     <span className='text-8xl font-semibold'>6</span>
                     <span className='uppercase '>total reflights</span>
