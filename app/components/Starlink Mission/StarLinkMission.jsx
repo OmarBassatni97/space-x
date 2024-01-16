@@ -2,25 +2,17 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React, { useEffect, useRef, useState } from 'react'
+import { useInView } from 'react-intersection-observer'
 
 const StarLinkMission = () => {
-    const divOne = useRef()
-    const [divOneVisible, setDivOneVisible] = useState()
+    const { ref, inView } = useInView()
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[0]
-            setDivOneVisible(entry?.isIntersecting)
-
-        })
-        observer.observe(divOne.current)
-    }, [])
     return (
-        <div className='h-screen flex justify-center'>
+        <div ref={ref} className='h-screen flex justify-center'>
             <div
                 className='flex w-[1440px] justify-center items-center text-white'>
                 <motion.div
-                    ref={divOne}
+                    
                     initial=
                     {{
                         opacity: 0,
@@ -28,7 +20,7 @@ const StarLinkMission = () => {
                     }}
                     animate={{
                         opacity: 1,
-                        x: divOneVisible ? 0 : -500
+                        x: inView ? 0 : -500
                     }}
                     transition={{ duration: 2 }}
                     className='flex flex-col gap-6 w-[40%]'>
@@ -36,10 +28,10 @@ const StarLinkMission = () => {
                     <p className='leading-10 opacity-90 text-xl'>On Friday, March 24 at 11:33 a.m. ET. Falcon 9 launched 56 Starlink satellites to low-Earth orbit from Space Launch Complex 40 at Cape Canaveral Space Force Station, Florida</p>
                 </motion.div>
                 <div>
-                    <Image src='/assets/images/Orbital.png' height={1200} width={1200} alt='orbital'/>
+                    <Image src='/assets/images/Orbital.png' height={1200} width={1200} alt='orbital' />
                 </div>
                 <motion.div
-                    ref={divOne}
+                   
                     initial=
                     {{
                         opacity: 0,
@@ -47,7 +39,7 @@ const StarLinkMission = () => {
                     }}
                     animate={{
                         opacity: 1,
-                        x: divOneVisible ? 0 : 500
+                        x: inView ? 0 : 500
                     }}
                     transition={{ duration: 2 }}
                     className='w-[40%]'>

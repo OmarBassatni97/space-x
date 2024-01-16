@@ -6,12 +6,13 @@ import { useInView } from 'react-intersection-observer'
 import { useTypewriter } from 'react-simple-typewriter'
 
 const FalconHeavy = () => {
-    const { ref, inView } = useInView();
+    const { ref, inView } = useInView({threshold:0.5});
     const [title] = useTypewriter({
         words: ['falcon heavy'],
         loop: 1,
         typeSpeed: 150
     })
+    
     return (
         <div className='h-screen flex justify-center items-center'>
             <div className='flex justify-center w-[1440px] gap-8'>
