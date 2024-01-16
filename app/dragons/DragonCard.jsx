@@ -5,7 +5,6 @@ import React from 'react'
 const DragonCard = ({ image, name, description }) => {
     const slug = name.toLowerCase()
     const splitedSlug = slug.split(" ").join('')
-    console.log(splitedSlug);
     return (
         <div className='border border-gray-200 '>
             <Image src={image} width={750} height={100} alt='dragon-img' className='h-[500px]' />

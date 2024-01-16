@@ -2,7 +2,6 @@
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
-import { space } from 'postcss/lib/list'
 import React, { useEffect, useState } from 'react'
 
 

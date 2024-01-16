@@ -13,7 +13,6 @@ const Capsules = () => {
         }
         getData()
     }, [])
-    console.log(data);
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-[1440px] grid grid-cols-4 items-center justify-center gap-5'>
