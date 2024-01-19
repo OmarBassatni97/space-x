@@ -2,18 +2,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import CoreCard from './CoreCard'
+import { useFetch } from '../hooks/hooks'
 
 const Cores = () => {
-    const [data, setData] = useState()
-    useEffect(() => {
-        const getData = async () => {
-            const response = await axios.get('https://api.spacexdata.com/v4/cores')
-            const capsules = response.data
-            setData(capsules)
-        }
-        getData()
-    }, [])
-
+    const { data } = useFetch('https://api.spacexdata.com/v4/cores')
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-[1440px] grid grid-cols-4 items-center justify-center gap-5'>

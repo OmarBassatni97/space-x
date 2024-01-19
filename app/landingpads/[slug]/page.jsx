@@ -1,20 +1,10 @@
 'use client'
-import axios from 'axios'
+import { useFetch } from '@/app/hooks/hooks';
 import Image from 'next/image';
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
 import { FaLongArrowAltLeft } from "react-icons/fa";
 const LandingPadDetail = ({ params }) => {
-    const [data, setData] = useState()
-    useEffect(() => {
-        const id = params.slug
-        const getData = async () => {
-            const response = await axios.get(`https://api.spacexdata.com/v4/landpads/${id}`)
-            const landingPad = response.data
-            setData(landingPad)
-        }
-        getData()
-    }, [])
+    const { data } = useFetch(`https://api.spacexdata.com/v4/landpads/${params.slug}`)
     return (
         data ? (
             <section className=' flex justify-center'>

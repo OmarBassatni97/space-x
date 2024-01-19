@@ -1,17 +1,10 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import LandingPad from './LandingPad'
+import { useFetch } from '../hooks/hooks'
 
 const LandingPads = () => {
-    const [data, setData] = useState()
-    useEffect(() => {
-        const getData = async () => {
-            const response = await axios.get('https://api.spacexdata.com/v4/landpads')
-            const landingPads = response.data
-            setData(landingPads)
-        }
-        getData()
-    }, [])
+    const { data } = useFetch('https://api.spacexdata.com/v4/landpads')
     return (
         <div className='flex justify-center items-center'>
             <div className='w-[1440px] grid grid-cols-4 justify-center gap-5'>

@@ -8,6 +8,10 @@ module.exports = {
                 
             },
             {
+                protocol:'https',
+                hostname:'images2.imgbox.com'
+            },
+            {
                 protocol: 'https',
                 hostname: 'farm8.staticflickr.com',
                 port: '',

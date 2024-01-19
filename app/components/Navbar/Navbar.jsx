@@ -38,7 +38,7 @@ const Navbar = () => {
                         <Link href='/cores' className='hover:text-gray-300 duration-300 cursor-pointer'>Cores</Link>
                         <Link href='/dragons' className='hover:text-gray-300 duration-300 cursor-pointer'>Dragons</Link>
                         <Link href='/landingpads' className='hover:text-gray-300 duration-300 cursor-pointer'>Landing Pads</Link>
-                        <li className='hover:text-gray-300 duration-300 cursor-pointer'>Launches</li>
+                        <Link href='launches' className='hover:text-gray-300 duration-300 cursor-pointer'>Launches</Link>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Launch Pads</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Missions</li>
                         <li className='hover:text-gray-300 duration-300 cursor-pointer'>Rockets</li>

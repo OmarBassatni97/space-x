@@ -7,9 +7,13 @@ import Loading from './components/Loading'
 
 const tektur = Tektur({ subsets: ['latin'], weight: '400' })
 
-
+export const metadata = {
+  title: 'SpaceX',
+  description: 'SpaceX information, dragons, launchpads, cores',
+}
 
 export default function RootLayout({ children }) {
+  
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => {
