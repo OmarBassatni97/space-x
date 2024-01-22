@@ -1,21 +1,12 @@
-'use client'
 import React from 'react'
 import { useFetch } from '../hooks/hooks'
 import LaunchPad from './LaunchPad'
 
-const LaunchPads = () => {
-    const { data, error, loading } = useFetch('https://api.spacexdata.com/v4/launchpads')
-    console.log(data);
+const LaunchPads = async () => {
+    const data = await useFetch('https://api.spacexdata.com/v4/launchpads')
+
     if (!data) {
         return <h1>No Data</h1>
-    }
-
-    if (error) {
-        return <h1>{error}</h1>
-    }
-
-    if (loading) {
-        return <h1>Loading</h1>
     }
 
     return (
@@ -27,7 +18,7 @@ const LaunchPads = () => {
                 }
             </div>
 
-        </div> 
+        </div>
     )
 }
 

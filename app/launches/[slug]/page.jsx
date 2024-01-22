@@ -1,5 +1,3 @@
-'use client'
-
 import { useFetch } from '@/app/hooks/hooks'
 import dayjs from 'dayjs'
 import Image from 'next/image'
@@ -7,16 +5,10 @@ import Link from 'next/link'
 import React from 'react'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 
-const LaunchDetailPage = ({ params }) => {
-    const { data, loading, error } = useFetch(`https://api.spacexdata.com/v4/launches/${params.slug}`)
+const LaunchDetailPage = async ({ params }) => {
+    const data = await useFetch(`https://api.spacexdata.com/v4/launches/${params.slug}`)
 
-    if (loading) {
-        return <p>Loading...</p>;
-    }
 
-    if (error) {
-        return <p>Error: {error.message}</p>;
-    }
 
     if (!data) {
         return <p>No data available</p>;

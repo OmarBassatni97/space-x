@@ -1,13 +1,13 @@
-'use client'
+
 import { useFetch } from '@/app/hooks/hooks'
-import axios from 'axios'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 
-const DragonDetail = ({ params }) => {
-  const { data } = useFetch(`https://api.spacexdata.com/v3/dragons/${params.slug}`)
+const DragonDetail = async ({ params }) => {
+  const  data  = await useFetch(`https://api.spacexdata.com/v3/dragons/${params.slug}`)
   return (
     <div className='text-white flex justify-center'>
       {data ?

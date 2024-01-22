@@ -1,11 +1,9 @@
-'use client'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import DragonCard from './DragonCard'
 import { useFetch } from '../hooks/hooks'
 
-const Dragons = () => {
-    const { data } = useFetch('https://api.spacexdata.com/v4/dragons')
+const Dragons = async () => {
+    const  data  = await useFetch('https://api.spacexdata.com/v4/dragons')
     return (
         <div className='flex justify-center items-center'>
             <div className='w-[1440px] grid grid-cols-2 justify-center gap-5'>

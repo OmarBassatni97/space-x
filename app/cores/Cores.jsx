@@ -1,11 +1,9 @@
-'use client'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import CoreCard from './CoreCard'
 import { useFetch } from '../hooks/hooks'
 
-const Cores = () => {
-    const { data } = useFetch('https://api.spacexdata.com/v4/cores')
+const Cores = async () => {
+    const  data  = await useFetch('https://api.spacexdata.com/v4/cores')
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-[1440px] grid grid-cols-4 items-center justify-center gap-5'>

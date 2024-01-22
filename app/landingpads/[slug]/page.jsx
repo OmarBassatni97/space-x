@@ -1,10 +1,9 @@
-'use client'
 import { useFetch } from '@/app/hooks/hooks';
 import Image from 'next/image';
 import Link from 'next/link'
 import { FaLongArrowAltLeft } from "react-icons/fa";
-const LandingPadDetail = ({ params }) => {
-    const { data } = useFetch(`https://api.spacexdata.com/v4/landpads/${params.slug}`)
+const LandingPadDetail = async ({ params }) => {
+    const  data  = await useFetch(`https://api.spacexdata.com/v4/landpads/${params.slug}`)
     return (
         data ? (
             <section className=' flex justify-center'>

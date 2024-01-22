@@ -1,11 +1,10 @@
-'use client'
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+
+import React from 'react'
 import CapsuleCard from './CapsuleCard'
 import { useFetch } from '../hooks/hooks'
 
-const Capsules = () => {
-    const { data } = useFetch('https://api.spacexdata.com/v4/capsules')
+const Capsules = async () => {
+    const data = await useFetch('https://api.spacexdata.com/v4/capsules')
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-[1440px] grid grid-cols-4 items-center justify-center gap-5'>

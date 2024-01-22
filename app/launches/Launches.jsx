@@ -1,11 +1,9 @@
-'use client'
-
 import React from 'react'
 import Launch from './Launch'
 import { useFetch } from '../hooks/hooks'
 
-const Launches = () => {
-    const { data } = useFetch('https://api.spacexdata.com/v4/launches')
+const Launches = async () => {
+    const  data  = await useFetch('https://api.spacexdata.com/v4/launches')
     return (
         <div className='flex justify-center'>
             <div className='w-[1440px] grid grid-cols-4 justify-center gap-5'>
