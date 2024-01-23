@@ -3,12 +3,11 @@ import { useFetch } from '../hooks/hooks'
 import LaunchPad from './LaunchPad'
 
 const LaunchPads = async () => {
-    const data = await useFetch('https://api.spacexdata.com/v4/launchpads')
+    const { data, error } = await useFetch('https://api.spacexdata.com/v4/launchpads')
 
-    if (!data) {
-        return <h1>No Data</h1>
+    if (error) {
+        return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
     }
-
     return (
         <div className='flex justify-center'>
             <div className='w-[1440px] grid grid-cols-4 justify-center gap-5'>

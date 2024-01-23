@@ -3,7 +3,10 @@ import Image from 'next/image';
 import Link from 'next/link'
 import { FaLongArrowAltLeft } from "react-icons/fa";
 const LandingPadDetail = async ({ params }) => {
-    const  data  = await useFetch(`https://api.spacexdata.com/v4/landpads/${params.slug}`)
+    const { data, error } = await useFetch(`https://api.spacexdata.com/v4/landpads/${params.slug}`)
+    if (error) {
+        return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
+    }
     return (
         data ? (
             <section className=' flex justify-center'>
@@ -30,15 +33,15 @@ const LandingPadDetail = async ({ params }) => {
                         </div>
                         <div className='mt-5 flex gap-2 items-center'>
                             <Link className='border py-2 px-5 border-white hover:bg-white hover:text-black duration-200' target='blank' href={data.wikipedia}>Wiki</Link>
-                            <Link href='/landingpads' className='flex items-center'><FaLongArrowAltLeft/>Back</Link>
+                            <Link href='/landingpads' className='flex items-center'><FaLongArrowAltLeft />Back</Link>
                         </div>
                     </div>
                     <div className='relative w-[700px]'>
-                        <Image fill={true} quality={100} src={data.images.large[0]}/>
+                        <Image fill={true} quality={100} src={data.images.large[0]} />
                     </div>
                 </div>
             </section>
-            
+
         )
             :
             <div className='text-white'>loading</div>

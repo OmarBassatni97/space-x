@@ -3,7 +3,10 @@ import LandingPad from './LandingPad'
 import { useFetch } from '../hooks/hooks'
 
 const LandingPads = async () => {
-    const data  = await useFetch('https://api.spacexdata.com/v4/landpads')
+    const { data, error }  = await useFetch('https://api.spacexdata.com/v4/landpads')
+    if (error) {
+        return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
+    }
     return (
         <div className='flex justify-center items-center'>
             <div className='w-[1440px] grid grid-cols-4 justify-center gap-5'>

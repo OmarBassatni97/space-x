@@ -6,13 +6,12 @@ import React from 'react'
 import { FaLongArrowAltLeft } from 'react-icons/fa'
 
 const LaunchDetailPage = async ({ params }) => {
-    const data = await useFetch(`https://api.spacexdata.com/v4/launches/${params.slug}`)
+    const { data, error } = await useFetch(`https://api.spacexdata.com/v4/launches/${params.slug}`)
 
-
-
-    if (!data) {
-        return <p>No data available</p>;
+    if (error) {
+        return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
     }
+
 
     return (
         <section className='flex justify-center'>

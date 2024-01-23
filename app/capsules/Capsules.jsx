@@ -4,7 +4,10 @@ import CapsuleCard from './CapsuleCard'
 import { useFetch } from '../hooks/hooks'
 
 const Capsules = async () => {
-    const data = await useFetch('https://api.spacexdata.com/v4/capsules')
+    const { data, error } = await useFetch('https://api.spacexdata.com/v4/capsules')
+    if (error) {
+        return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
+    }
     return (
         <div className='w-full flex items-center justify-center'>
             <div className='w-[1440px] grid grid-cols-4 items-center justify-center gap-5'>
