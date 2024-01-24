@@ -30,7 +30,7 @@
 //     return data
 // }
 
-export const useFetch = async (url) => {
+export const getData = async (url) => {
     try {
         const response = await fetch(url);
         if (!response.ok) {

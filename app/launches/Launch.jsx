@@ -14,7 +14,7 @@ const Launch = ({ image, details, id, name }) => {
                     {details ? `${details.slice(0,50)}...` : 'No details'}
                 </p>
                 <div className='mt-4'>
-                    <Link className='py-2 px-3 border border-white hover:bg-white hover:text-black transition duration-300' href={`launches/${id}`}>Read more</Link>
+                    <Link className='py-2 px-3 border border-white hover:bg-white hover:text-black transition duration-300' href={`/launches/${id}`}>Read more</Link>
                 </div>
             </div>
         </div>

@@ -1,13 +1,11 @@
-
-import { useFetch } from '@/app/hooks/hooks'
-
+import { getData } from '@/app/hooks/hooks'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 
 const DragonDetail = async ({ params }) => {
-  const { data, error } = await useFetch(`https://api.spacexdata.com/v3/dragons/${params.slug}`)
+  const { data, error } = await getData(`https://api.spacexdata.com/v3/dragons/${params.slug}`)
   if (error) {
     return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
   }

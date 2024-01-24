@@ -1,9 +1,9 @@
 import React from 'react'
 import DragonCard from './DragonCard'
-import { useFetch } from '../hooks/hooks'
+import { getData } from '../hooks/hooks'
 
 const Dragons = async () => {
-    const { data, error }  = await useFetch('https://api.spacexdata.com/v4/dragons')
+    const { data, error } = await getData('https://api.spacexdata.com/v4/dragons')
     if (error) {
         return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
     }

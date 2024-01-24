@@ -1,9 +1,9 @@
 import React from 'react'
-import { useFetch } from '../hooks/hooks'
+import { getData } from '../hooks/hooks'
 import LaunchPad from './LaunchPad'
 
 const LaunchPads = async () => {
-    const { data, error } = await useFetch('https://api.spacexdata.com/v4/launchpads')
+    const { data, error } = await getData('https://api.spacexdata.com/v4/launchpads')
 
     if (error) {
         return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>

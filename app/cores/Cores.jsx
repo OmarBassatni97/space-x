@@ -1,9 +1,9 @@
 import React from 'react'
 import CoreCard from './CoreCard'
-import { useFetch } from '../hooks/hooks'
+import { getData } from '../hooks/hooks'
 
 const Cores = async () => {
-    const { data, error }  = await useFetch('https://api.spacexdata.com/v4/cores')
+    const { data, error } = await getData('https://api.spacexdata.com/v4/cores')
     if (error) {
         return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
     }

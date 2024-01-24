@@ -1,10 +1,10 @@
 
 import React from 'react'
 import CapsuleCard from './CapsuleCard'
-import { useFetch } from '../hooks/hooks'
+import { getData } from '../hooks/hooks'
 
 const Capsules = async () => {
-    const { data, error } = await useFetch('https://api.spacexdata.com/v4/capsules')
+    const { data, error } = await getData('https://api.spacexdata.com/v4/capsules')
     if (error) {
         return <div className='text-white w-full flex justify-center items-center text-2xl'>{error}</div>
     }
